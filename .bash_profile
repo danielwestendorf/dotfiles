@@ -5,11 +5,8 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
-# init z   https://github.com/rupa/z
-. ~/code/z/z.sh
-
-# init rvm
-source ~/.rvm/scripts/rvm
+# Load z from the homebrew install
+. `brew --prefix`/etc/profile.d/z.sh
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -24,3 +21,6 @@ export LANG="en_US"
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
+
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

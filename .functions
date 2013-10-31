@@ -1,3 +1,10 @@
+# symlink the current directory to apache
+function httpit() {
+  mkdir -p ~/.pow/${PWD##*/}/
+  ln -s $PWD ~/.pow/channel_lineup/public
+  open http://${PWD##*/}.dev
+}
+
 # Create a new directory and enter it
 function md() {
 	mkdir -p "$@" && cd "$@"

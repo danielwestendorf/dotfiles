@@ -21,3 +21,6 @@ complete -W "NSGlobalDomain" defaults
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Z should be installed by homebrew
+. /usr/local/etc/profile.d/z.sh

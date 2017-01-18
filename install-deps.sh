@@ -6,3 +6,6 @@ brew install rbenv ruby-build
 
 # z
 brew install z
+
+# direnv
+brew instll direnv

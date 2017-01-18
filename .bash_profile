@@ -24,3 +24,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Z should be installed by homebrew
 . /usr/local/etc/profile.d/z.sh
+
+# Eval direnv
+eval "$(direnv hook bash)"
